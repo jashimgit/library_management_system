@@ -11,6 +11,11 @@ class Admin_model extends CI_Model
     }
 
 
+    /**
+     *      Get data for user validation 
+     *      Return data to controller 
+     */
+
     public function get_user_details($user_email)
     {
         $user_details = $this->db->select('*')

@@ -56,10 +56,14 @@ $route['add-author'] = 'author/show_add_author_form';
 $route['add-student'] = 'student/show_addstudent_form';
 
 
-$route['admin-logout'] = 'admin/logout';
+
+$route['dashboard'] = 'dashboard/show_dashboard';
+
+
 
 $route['admin-login'] = 'admin/check_admin_login';
 $route['admin'] = 'admin';
+$route['admin-logout'] = 'dashboard/logout';
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
