@@ -10,10 +10,10 @@
     <meta name="author" content="">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/lib/bootstrap/css/bootstrap.css')?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/lib/font-awesome/css/font-awesome.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/lib/bootstrap/css/bootstrap.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/lib/font-awesome/css/font-awesome.css') ?>">
 
-    <script src="<?php echo base_url('assets/lib/jquery-1.11.1.min.js')?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/lib/jquery-1.11.1.min.js') ?>" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/style/theme.css') ?>" />
 </head>
 
@@ -51,16 +51,16 @@
             </li>
             <li>
                 <ul class="dashboard-menu nav nav-list collapse in">
-                    <li><a href="addstudent.html"><span class="fa fa-caret-right"></span>Add Student</a></li>
+                    <li><a href="<?php echo 'add-student'; ?>"><span class="fa fa-caret-right"></span>Add Student</a></li>
                     <li><a href="studentlist.html"><span class="fa fa-caret-right"></span>Student List</a></li>
 
-                    <li><a href="adddep.html"><span class="fa fa-caret-right"></span>Add Department</a></li>
+                    <li><a href="<?php echo 'add-department'; ?>"><span class="fa fa-caret-right"></span>Add Department</a></li>
                     <li><a href="deplist.html"><span class="fa fa-caret-right"></span>Department List</a></li>
 
-                    <li><a href="addauthor.html"><span class="fa fa-caret-right"></span>Add Author</a></li>
+                    <li><a href="<?php echo 'add-author'; ?>"><span class="fa fa-caret-right"></span>Add Author</a></li>
                     <li><a href="authorlist.html"><span class="fa fa-caret-right"></span>Author List</a></li>
 
-                    <li><a href="addbook.html"><span class="fa fa-caret-right"></span>Add Book</a></li>
+                    <li><a href="<?php echo 'add-book'; ?>"><span class="fa fa-caret-right"></span>Add Book</a></li>
                     <li><a href="booklist.html"><span class="fa fa-caret-right"></span>Book List</a></li>
 
                     <li><a href="issuebook.html"><span class="fa fa-caret-right"></span>Issue Book</a></li>
@@ -85,7 +85,7 @@
     <footer class="footoption">
         <p>&copy; <a href="http://www.trainingwithliveproject.com/" target="_blank">Training with live project</a></p>
     </footer>
-    <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js')?>"></script>
+    <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js') ?>"></script>
 </body>
 
 </html>
