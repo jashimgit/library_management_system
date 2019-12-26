@@ -37,7 +37,7 @@
                         <li class="divider"></li>
                         <li class="dropdown-header">Admin Panel</li>
                         <li><a href="./">Users</a></li>
-                        <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
+                        <li><a tabindex="-1" href="<?php echo 'admin-logout'; ?>">Logout</a></li>
                     </ul>
                 </li>
             </ul>
