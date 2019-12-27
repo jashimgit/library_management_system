@@ -75,5 +75,9 @@ class Department extends CI_Controller
         $this->load->view('admin/dashboard', $data);
     } // End of listAllDep method
 
+    /**
+     * 
+     *   
+     */
 
 }

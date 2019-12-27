@@ -8,6 +8,8 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('admin_model');
+       
+        
 
         // redirect user to dashboard if logged in to dashboard
         // if not logged in then redirect to login page
