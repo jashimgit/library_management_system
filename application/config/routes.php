@@ -50,6 +50,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+$route['book-list'] = 'book/getAllBooks';
 $route['add-book'] = 'book/show_addbook_form';
 
 

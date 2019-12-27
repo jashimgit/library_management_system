@@ -59,17 +59,17 @@
             </li>
             <li>
                 <ul class="dashboard-menu nav nav-list collapse in">
-                    <li><a href="<?php echo 'add-student'; ?>"><span class="fa fa-caret-right"></span>Add Student</a></li>
+                    <li><a href="add-student"><span class="fa fa-caret-right"></span>Add Student</a></li>
                     <li><a href="studentlist.html"><span class="fa fa-caret-right"></span>Student List</a></li>
 
-                    <li><a href="<?php echo 'add-department'; ?>"><span class="fa fa-caret-right"></span>Add Department</a></li>
-                    <li><a href="<?php echo 'dep-list'; ?>"><span class="fa fa-caret-right"></span>Department List</a></li>
+                    <li><a href="add-department"><span class="fa fa-caret-right"></span>Add Department</a></li>
+                    <li><a href="dep-list"><span class="fa fa-caret-right"></span>Department List</a></li>
 
-                    <li><a href="<?php echo 'add-author'; ?>"><span class="fa fa-caret-right"></span>Add Author</a></li>
-                    <li><a href="<?php echo 'author-list'; ?>"><span class="fa fa-caret-right"></span>Author List</a></li>
+                    <li><a href="add-author"><span class="fa fa-caret-right"></span>Add Author</a></li>
+                    <li><a href="author-list"><span class="fa fa-caret-right"></span>Author List</a></li>
 
-                    <li><a href="<?php echo 'add-book'; ?>"><span class="fa fa-caret-right"></span>Add Book</a></li>
-                    <li><a href="<?php echo 'book-list'; ?>"><span class="fa fa-caret-right"></span>Book List</a></li>
+                    <li><a href="add-book"><span class="fa fa-caret-right"></span>Add Book</a></li>
+                    <li><a href="book-list"><span class="fa fa-caret-right"></span>Book List</a></li>
 
                     <li><a href="issuebook.html"><span class="fa fa-caret-right"></span>Issue Book</a></li>
                     <li><a href="listed.html"><span class="fa fa-caret-right"></span>Edit List</a></li>

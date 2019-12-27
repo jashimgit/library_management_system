@@ -3,6 +3,14 @@
 
 <div class="panel-body" style="width:600px;">
     <form action="book/store" method="POST">
+
+        <?php
+
+        if (!empty($this->session->flashdata('success'))) {
+            echo $success;
+        }
+        ?>
+
         <div class="form-group">
             <label>Book Name</label>
             <input type="text" class="form-control span12" name="book_name">
@@ -28,7 +36,7 @@
         </div>
         <div class="form-group">
             <label>Book Description</label>
-            <input type="text" class="form-control span12" name="book_description">
+            <textarea type="text" class="form-control span12" name="book_des" cols="15" rows="6"></textarea>
         </div>
 
         <div class="form-group">
