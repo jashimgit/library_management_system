@@ -55,6 +55,25 @@ class Department extends CI_Controller
             // load view with data 
             $this->load->view('department/add_dept_form', $message);
         }
-    }
+    } // end of method
+
+    /**
+     *   Show all Department list
+     * 
+     */
+    public function listAllDep()
+    {
+
+        $data = array();
+        $data['title'] = 'All Departments';
+        // Get Results through Department Model 
+        $data['results'] =  $this->department_model->getAllDepList();
+        $data['content'] = $this->load->view('department/deplist', $data, true);
+
+        // Load dashboard 
+
+        $this->load->view('admin/dashboard', $data);
+    } // End of listAllDep method
+
+
 }
- 

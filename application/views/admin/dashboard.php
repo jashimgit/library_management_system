@@ -8,12 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <!-- Fonts api  -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- BootStrap css and Font Awesome css  -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/lib/bootstrap/css/bootstrap.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/lib/font-awesome/css/font-awesome.css') ?>">
-
+    <!-- jQuery  -->
     <script src="<?php echo base_url('assets/lib/jquery-1.11.1.min.js') ?>" type="text/javascript"></script>
+    <!-- Data Tables  -->
+    <script src="<?php echo base_url('assets/DataTable/jquery.dataTables.js') ?>" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/DataTable/jquery.dataTables.css') ?>" />
+    <!-- Custom Css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/style/theme.css') ?>" />
 </head>
 
@@ -57,7 +63,7 @@
                     <li><a href="studentlist.html"><span class="fa fa-caret-right"></span>Student List</a></li>
 
                     <li><a href="<?php echo 'add-department'; ?>"><span class="fa fa-caret-right"></span>Add Department</a></li>
-                    <li><a href="deplist.html"><span class="fa fa-caret-right"></span>Department List</a></li>
+                    <li><a href="<?php echo 'dep-list'; ?>"><span class="fa fa-caret-right"></span>Department List</a></li>
 
                     <li><a href="<?php echo 'add-author'; ?>"><span class="fa fa-caret-right"></span>Add Author</a></li>
                     <li><a href="authorlist.html"><span class="fa fa-caret-right"></span>Author List</a></li>
@@ -88,6 +94,11 @@
         <p>&copy; <a href="http://www.trainingwithliveproject.com/" target="_blank">Training with live project</a></p>
     </footer>
     <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js') ?>"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
 </body>
 
 </html>

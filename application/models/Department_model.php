@@ -19,4 +19,16 @@ class Department_model extends CI_Model
        $this->db->insert('tbl_department', $dep_name);
        
     }
+
+    /**
+     *      get all department list
+     */
+    public function getAllDepList()
+    {
+        
+        $result = $this->db->select('*')->from('tbl_department')->get()->result();
+
+        return $result;
+        
+    }
 }
