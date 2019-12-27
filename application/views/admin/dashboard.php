@@ -66,10 +66,10 @@
                     <li><a href="<?php echo 'dep-list'; ?>"><span class="fa fa-caret-right"></span>Department List</a></li>
 
                     <li><a href="<?php echo 'add-author'; ?>"><span class="fa fa-caret-right"></span>Add Author</a></li>
-                    <li><a href="authorlist.html"><span class="fa fa-caret-right"></span>Author List</a></li>
+                    <li><a href="<?php echo 'author-list'; ?>"><span class="fa fa-caret-right"></span>Author List</a></li>
 
                     <li><a href="<?php echo 'add-book'; ?>"><span class="fa fa-caret-right"></span>Add Book</a></li>
-                    <li><a href="booklist.html"><span class="fa fa-caret-right"></span>Book List</a></li>
+                    <li><a href="<?php echo 'book-list'; ?>"><span class="fa fa-caret-right"></span>Book List</a></li>
 
                     <li><a href="issuebook.html"><span class="fa fa-caret-right"></span>Issue Book</a></li>
                     <li><a href="listed.html"><span class="fa fa-caret-right"></span>Edit List</a></li>

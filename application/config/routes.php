@@ -51,13 +51,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 
 $route['add-book'] = 'book/show_addbook_form';
+
+
+// Author route 
+$route['author-list'] = 'author/listAllAuthor';
+$route['author-store'] = 'author/store';
 $route['add-author'] = 'author/show_add_author_form';
 
+// Student route 
 $route['add-student'] = 'student/show_addstudent_form';
+
+
+// Department Route 
 $route['dep-store'] = 'department/store';
 $route['dep-list'] = 'department/listAllDep';
 $route['add-department'] = 'department/show_add_dept_form';
 
+
+// admin route 
 $route['dashboard'] = 'dashboard/show_dashboard';
 
 
