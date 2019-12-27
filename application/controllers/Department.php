@@ -7,6 +7,7 @@ class Department extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('department_model');
     }
 
 
@@ -22,4 +23,38 @@ class Department extends CI_Controller
 
         $this->load->view('admin/dashboard', $data);
     }
+
+
+    // store department 
+    public function store()
+    {
+
+        $dep_name = array(
+            'dep_name' => $this->input->post('dep_name'),
+        );
+
+        // var_dump($dep_name);
+        // exit();
+
+        $save_dep = $this->department_model->store_department($dep_name);
+
+        redirect('add-department');
+        $message = '';
+
+        if ($save_dep) {
+
+            $message['sucess'] = 'Department Added Successfully';
+
+
+            // load view with data 
+            $this->load->view('department/add_dept_form', $message);
+        } else {
+            $message['error'] = 'Department Not Added Successfull';
+
+
+            // load view with data 
+            $this->load->view('department/add_dept_form', $message);
+        }
+    }
 }
+ 
