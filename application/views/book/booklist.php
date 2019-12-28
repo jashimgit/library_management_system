@@ -5,17 +5,24 @@
          <tr>
              <th>#</th>
              <th>Book Name</th>
+             <th>Author Name</th>
+             <th>department name</th>
+             <th>Book details</th>
              <th>Action</th>
 
          </tr>
      </thead>
      <tbody>
-
          <?php $i = 0;
             foreach ($results as $row) : $i++; ?>
              <tr>
                  <td><?php echo $i; ?></td>
-                 <td><?php echo $row->dep_name; ?></td>
+                 <td><?php echo $row->book_name; ?></td>
+                 <td><?php if($row->author_id == $author->author_id) {
+                            echo $row->author_name;
+                        }?></td>
+                 <td><?php echo $row->dept_id; ?></td>
+                 <td><?php echo $row->book_des; ?></td>
 
                  <td>
                      <a href="user.html" class="btn btn-info"><i class="fa fa-pencil"></i></a>

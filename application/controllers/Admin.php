@@ -9,8 +9,6 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model('admin_model');
        
-        
-
         // redirect user to dashboard if logged in to dashboard
         // if not logged in then redirect to login page
 
@@ -31,8 +29,7 @@ class Admin extends CI_Controller
 
 
     /**
-     * check input data and process login
-     * process user input data 
+     * check input data and process login process user input data 
      * validate data , if validated 
      * login user else redirect to login page
      */
@@ -41,8 +38,6 @@ class Admin extends CI_Controller
     {
         $user_email = $this->input->post('user_email');
         $password = $this->input->post('user_password');
-
-        // $encripted_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Get data from DB and return data
         $user_details = $this->admin_model->get_user_details($user_email);

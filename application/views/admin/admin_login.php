@@ -23,8 +23,6 @@
         Library Management
     </div>
 
-
-
     <div class="dialog loginform">
         <div class="panel panel-default">
             <p class="panel-heading no-collapse">Sign In</p>
@@ -34,7 +32,7 @@
                 </div>
             <?php  }    ?>
             <div class="panel-body">
-                <form action="<?php echo 'admin-login'; ?>" method="post">
+                <form action="admin-login" method="post">
                     <div class="form-group">
                         <label>Email</label>
                         <input type="email" class="form-control span12" name="user_email">
@@ -54,7 +52,7 @@
         </div>
     </div>
 
-    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
 
     <div class="footenote">
         <h2>Training with live project</h2>

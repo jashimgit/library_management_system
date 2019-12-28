@@ -11,7 +11,8 @@ class Book extends CI_Controller
         $this->load->model('department_model');
         $this->load->model('author_model');
         $this->load->model('book_model');
-
+        $data['department'] = $this->department_model->getAllDepList();
+        $data['author'] = $this->author_model->getAllAuthor();
     }
 
     public function show_addbook_form()
@@ -39,7 +40,7 @@ class Book extends CI_Controller
             'book_des' => $this->input->post('book_des')
         );
 
-        $this->book_model->addBooks($data);
+        $result = $this->book_model->addBooks($data);
 
         if ($result) {
             $this->session->set_flashdata('success', 'Book added Successfully');
@@ -50,6 +51,16 @@ class Book extends CI_Controller
 
     public function getAllBooks()
     {
-        echo 'all books';
+        $data = array();
+        $data['title'] = 'All Books';
+
+        $data['results'] = $this->book_model->getAllBooks();
+        
+
+        $data['content'] = $this->load->view('book/booklist', $data, true);
+
+        // load main dashboad 
+
+        $this->load->view('admin/dashboard', $data);
     }
 }
