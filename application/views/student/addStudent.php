@@ -9,7 +9,7 @@
         </div>
         <div class="form-group">
             <label>Department</label>
-            <select name="dep_namee" id="dep_name" class="form-control span12">
+            <select name="dep_name" id="dep_name" class="form-control span12">
                 <option value="">1</option>
                 <option value="">1</option>
                 <option value="">1</option>
