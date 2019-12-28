@@ -12,6 +12,16 @@ class Student extends CI_Controller
         parent::__construct();
     }
 
+    public function index()
+    {
+        $data = array();
+        $data['title'] = 'All Students list';
+        $data['content'] = $this->load->view('student/studentlist', $data, true);
+
+        $this->load->view('admin/dashboard', $data);
+    }
+
+
     /**
      *       view Add Student form
      */

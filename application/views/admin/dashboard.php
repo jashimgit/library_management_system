@@ -60,7 +60,7 @@
             <li>
                 <ul class="dashboard-menu nav nav-list collapse in">
                     <li><a href="add-student"><span class="fa fa-caret-right"></span>Add Student</a></li>
-                    <li><a href="studentlist.html"><span class="fa fa-caret-right"></span>Student List</a></li>
+                    <li><a href="student"><span class="fa fa-caret-right"></span>Student List</a></li>
 
                     <li><a href="add-department"><span class="fa fa-caret-right"></span>Add Department</a></li>
                     <li><a href="dep-list"><span class="fa fa-caret-right"></span>Department List</a></li>
