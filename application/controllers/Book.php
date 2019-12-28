@@ -7,12 +7,10 @@ class Book extends CI_Controller
 
     public function __construct()
     {
-        parent::__construct();
+        parent::__construct();;
+        $this->load->model('book_model');
         $this->load->model('department_model');
         $this->load->model('author_model');
-        $this->load->model('book_model');
-        $data['department'] = $this->department_model->getAllDepList();
-        $data['author'] = $this->author_model->getAllAuthor();
     }
 
     public function show_addbook_form()
@@ -55,7 +53,7 @@ class Book extends CI_Controller
         $data['title'] = 'All Books';
 
         $data['results'] = $this->book_model->getAllBooks();
-        
+
 
         $data['content'] = $this->load->view('book/booklist', $data, true);
 
