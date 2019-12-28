@@ -6,8 +6,8 @@
              <th>#</th>
              <th>Book Name</th>
              <th>Author Name</th>
-             <th>Department name</th>
-             <th width="30%">Book details</th>
+             <th>Department</th>
+             <th style="text-align:center" width="30%">Book details</th>
              <th>Action</th>
 
          </tr>
