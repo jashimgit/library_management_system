@@ -59,8 +59,7 @@ $route['author-list'] = 'author/listAllAuthor';
 $route['author-store'] = 'author/store';
 $route['add-author'] = 'author/show_add_author_form';
 
-// Student route 
-$route['add-student'] = 'student/show_addstudent_form';
+
 
 
 // Department Route 
@@ -68,6 +67,9 @@ $route['dep-store'] = 'department/store';
 $route['dep-list'] = 'department/listAllDep';
 $route['add-department'] = 'department/show_add_dept_form';
 
+
+$route['add-student'] = 'student/show_addstudent_form';
+$route['store'] = 'student/store';
 
 // admin route 
 $route['dashboard'] = 'dashboard/show_dashboard';

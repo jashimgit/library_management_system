@@ -12,6 +12,10 @@ class Student extends CI_Controller
         parent::__construct();
         $this->load->model('student_model');
         $this->load->model('department_model');
+        $this->load->library('form_validation');
+        
+
+        $data = array();
     }
 
     public function index()
@@ -31,8 +35,6 @@ class Student extends CI_Controller
      */
     public function show_addstudent_form()
     {
-
-        $data = array();
         $data['title'] = 'Add Student';
         $data['result'] = $this->department_model->getAllDepList();
         $data['content'] = $this->load->view('student/addStudent', $data, true);
@@ -45,4 +47,33 @@ class Student extends CI_Controller
     /**
      *    Store student
      */
+    public function store()
+    {
+
+        $this->form_validation->set_rules('s_name', 'Student Name', 'required|trim');
+        $this->form_validation->set_rules('dep_id', 'Department Name', 'required|trim');
+        $this->form_validation->set_rules('s_roll', 'Roll Number', 'required|trim');
+        $this->form_validation->set_rules('s_reg', 'Registration number', 'required|trim');
+        $this->form_validation->set_rules('s_session', 'Session', 'required|trim');
+        
+        
+        if ($this->form_validation->run()) {
+            $this->student_model->save();
+            $data['success_message'] = 'Student Added successfully';
+            $data['title'] = 'Add Student';
+            $data['result'] = $this->department_model->getAllDepList();
+            
+            $data['content'] = $this->load->view('student/addStudent', $data, true);
+
+            // load dashboard
+
+            $this->load->view('admin/dashboard', $data);
+            
+        } else {
+           $this->show_addstudent_form();
+        }
+        
+
+       
+    } // <--- ./ End of Store method
 }

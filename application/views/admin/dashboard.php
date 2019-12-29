@@ -59,6 +59,7 @@
             </li>
             <li>
                 <ul class="dashboard-menu nav nav-list collapse in">
+
                     <li><a href="add-student"><span class="fa fa-caret-right"></span>Add Student</a></li>
                     <li><a href="student"><span class="fa fa-caret-right"></span>Student List</a></li>
 
