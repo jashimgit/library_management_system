@@ -8,22 +8,21 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('admin_model');
-       
+
         // redirect user to dashboard if logged in to dashboard
         // if not logged in then redirect to login page
 
         if (isset($this->session->user_id)) {
             redirect('dashboard');
-        } else {
-            $this->load->view('admin/admin_login');
-        }
+        } 
+        // else {
+        //     redirect('admin');
+        // }
     }
-
 
     // load admin login page 
     public function index()
     {
-
         $this->load->view('admin/admin_login');
     }
 
@@ -43,6 +42,7 @@ class Admin extends CI_Controller
         $user_details = $this->admin_model->get_user_details($user_email);
 
         if (password_verify($password, $user_details->user_password)) {
+
             if ($user_details->user_status == 1) {
                 $session_data = array(
                     'user_email' => $user_details->user_email,

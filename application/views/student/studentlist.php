@@ -1,4 +1,7 @@
 <h2>Student List</h2>
+<?php
+echo $this->session->flashdata('success');
+?>
 <hr />
 <table class="table">
     <thead>
@@ -15,9 +18,9 @@
     <tbody>
         <?php
         $i = 0;
-        foreach ($result as $row) : ?>
+        foreach ($result as $row) : $i++ ?>
             <tr>
-                <td><?php $i; ?></td>
+                <td><?php echo $i; ?></td>
                 <td><?php echo $row->s_name ?></td>
                 <td><?php echo $row->dep_name ?></td>
                 <td><?php echo $row->s_roll ?></td>
@@ -29,6 +32,6 @@
                 </td>
             </tr>
 
-        <?php $i++;   endforeach;  ?>
+        <?php endforeach;  ?>
     </tbody>
 </table>

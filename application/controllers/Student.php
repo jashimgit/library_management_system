@@ -13,7 +13,7 @@ class Student extends CI_Controller
         $this->load->model('student_model');
         $this->load->model('department_model');
         $this->load->library('form_validation');
-        
+
 
         $data = array();
     }
@@ -55,25 +55,24 @@ class Student extends CI_Controller
         $this->form_validation->set_rules('s_roll', 'Roll Number', 'required|trim');
         $this->form_validation->set_rules('s_reg', 'Registration number', 'required|trim');
         $this->form_validation->set_rules('s_session', 'Session', 'required|trim');
-        
-        
+        $this->form_validation->set_rules('s_batch', 'Batch', 'required|trim');
+
+
         if ($this->form_validation->run()) {
             $this->student_model->save();
-            $data['success_message'] = 'Student Added successfully';
+
+            // $data['success_message'] = 'Student Added successfully';
+            $this->session->set_flashdata('success', 'Student added successfully');
+            redirect('student');
+        } else {
+            // $this->show_addstudent_form();
             $data['title'] = 'Add Student';
             $data['result'] = $this->department_model->getAllDepList();
-            
             $data['content'] = $this->load->view('student/addStudent', $data, true);
 
             // load dashboard
 
             $this->load->view('admin/dashboard', $data);
-            
-        } else {
-           $this->show_addstudent_form();
         }
-        
-
-       
     } // <--- ./ End of Store method
 }
