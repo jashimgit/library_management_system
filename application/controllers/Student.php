@@ -11,6 +11,7 @@ class Student extends CI_Controller
     {
         parent::__construct();
         $this->load->model('student_model');
+        $this->load->model('department_model');
     }
 
     public function index()
@@ -33,10 +34,15 @@ class Student extends CI_Controller
 
         $data = array();
         $data['title'] = 'Add Student';
+        $data['result'] = $this->department_model->getAllDepList();
         $data['content'] = $this->load->view('student/addStudent', $data, true);
 
         // load dashboard
 
         $this->load->view('admin/dashboard', $data);
     }
+
+    /**
+     *    Store student
+     */
 }

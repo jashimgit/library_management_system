@@ -1,4 +1,4 @@
-<H2>Add Student</h2>
+<H2><?php echo $title; ?></h2>
 <hr />
 
 <div class="panel-body" style="width:600px;">
@@ -10,11 +10,9 @@
         <div class="form-group">
             <label>Department</label>
             <select name="dep_name" id="dep_name" class="form-control span12">
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
-                <option value="">1</option>
+                <?php foreach ($result as $row) : ?>
+                    <option value="<?php $row->dep_id; ?>"><?php echo $row->dep_name; ?></option>
+                <?php endforeach; ?>
             </select>
         </div>
         <div class="form-group">

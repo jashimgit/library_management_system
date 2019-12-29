@@ -13,8 +13,9 @@
         </tr>
     </thead>
     <tbody>
-        <?php $i = 0;
-        foreach ($result as $row) : $i++; ?>
+        <?php
+        $i = 0;
+        foreach ($result as $row) : ?>
             <tr>
                 <td><?php $i; ?></td>
                 <td><?php echo $row->s_name ?></td>
@@ -28,6 +29,6 @@
                 </td>
             </tr>
 
-        <?php endforeach;  ?>
+        <?php $i++;   endforeach;  ?>
     </tbody>
 </table>
