@@ -4,7 +4,7 @@
 <div class="panel-body" style="width:600px;">
 
 
-    <form action="student/store" method="POST">
+    <form action="store" method="post">
 
 
         <div class="form-group">
@@ -18,10 +18,12 @@
             <select name="dep_id" id="dep_name" class="form-control span12">
                 <option value=""> Select Department </option>
                 <?php foreach ($result as $row) : ?>
-                    <option value="<?php echo $row->dep_id; ?>"><?php echo $row->dep_name; ?></option>
+                    <option value="<?php echo $row->dep_id; ?><?php echo set_select('dep_id', $row->dep_id); ?>">
+                        <?php echo $row->dep_name; ?>
+                    </option>
                 <?php endforeach; ?>
-                <?php echo form_error('dep_id'); ?>
             </select>
+            <?php echo form_error('dep_id'); ?>
 
         </div>
 

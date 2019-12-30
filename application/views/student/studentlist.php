@@ -1,7 +1,14 @@
 <h2>Student List</h2>
 <?php
-echo $this->session->flashdata('success');
-?>
+$success_msg = $this->session->flashdata('success');
+if (isset($success_msg)) { ?>
+
+    <div class="alert alert-success">
+        <?php echo $success_msg; ?>
+    </div>
+
+<?php } ?>
+
 <hr />
 <table class="table">
     <thead>

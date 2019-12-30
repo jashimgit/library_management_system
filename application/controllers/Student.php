@@ -29,7 +29,6 @@ class Student extends CI_Controller
         $this->load->view('admin/dashboard', $data);
     }
 
-
     /**
      *       view Add Student form
      */
@@ -44,19 +43,20 @@ class Student extends CI_Controller
         $this->load->view('admin/dashboard', $data);
     }
 
-    /**
-     *    Store student
+    /**   Store student
+     *    Validate data, if validation success then insert data
+     *    if validation unsuccess then return to previous page with
+     *    inputed data with error 
      */
+
     public function store()
     {
-
         $this->form_validation->set_rules('s_name', 'Student Name', 'required|trim');
         $this->form_validation->set_rules('dep_id', 'Department Name', 'required|trim');
         $this->form_validation->set_rules('s_roll', 'Roll Number', 'required|trim');
         $this->form_validation->set_rules('s_reg', 'Registration number', 'required|trim');
         $this->form_validation->set_rules('s_session', 'Session', 'required|trim');
         $this->form_validation->set_rules('s_batch', 'Batch', 'required|trim');
-
 
         if ($this->form_validation->run()) {
             $this->student_model->save();
@@ -65,14 +65,13 @@ class Student extends CI_Controller
             $this->session->set_flashdata('success', 'Student added successfully');
             redirect('student');
         } else {
-            // $this->show_addstudent_form();
-            $data['title'] = 'Add Student';
-            $data['result'] = $this->department_model->getAllDepList();
-            $data['content'] = $this->load->view('student/addStudent', $data, true);
+            $this->show_addstudent_form();
+            // $data['title'] = 'Add Student';
+            // $data['result'] = $this->department_model->getAllDepList();
+            // $data['content'] = $this->load->view('student/addStudent', $data, true);
+            // // load dashboard
+            // $this->load->view('admin/dashboard', $data);
 
-            // load dashboard
-
-            $this->load->view('admin/dashboard', $data);
         }
     } // <--- ./ End of Store method
 }
